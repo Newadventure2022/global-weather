@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Let's see if it still works after running the npm run build</p>
+        <p>Continue to work</p>
         <a
           className="App-link"
           href="https://reactjs.org"
