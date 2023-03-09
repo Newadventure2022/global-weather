@@ -12,7 +12,7 @@ export default function App() {
       <div className="App">
         <div className="Container">
           <div className="headerBorder">
-            <h1>React Weather App</h1>
+            <h1>Weather</h1>
             <Search />
           </div>
           <div className="cities">
