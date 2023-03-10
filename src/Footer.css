@@ -5,7 +5,12 @@
   position: relative;
   margin-top: 100px;
 }
-.my-name {
+.Footer a {
+  text-decoration: none;
+  color: blue;
+}
+
+span {
   color: #000;
   opacity: 0.5;
 }
