@@ -16,9 +16,10 @@ export default function App() {
             <h1>Weather</h1>
             <Search />
           </div>
+
           <div className="cities">
             <h2 className="current-city">
-              <span id="current-city"> Spain </span>
+              <Search defaultCity="Valencia" />
             </h2>
           </div>
 
