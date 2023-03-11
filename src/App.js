@@ -1,5 +1,6 @@
 import React from "react";
 import Search from "./Search.js";
+
 import Temperature from "./Temperature.js";
 import Forecast from "./Forecast.js";
 import Footer from "./Footer";
@@ -20,6 +21,7 @@ export default function App() {
               <span id="current-city"> Spain </span>
             </h2>
           </div>
+
           <Temperature />
           <div className="nextSix">
             <p className="current-city">Next 6 Day Weather Forecast</p>
