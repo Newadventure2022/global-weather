@@ -4,6 +4,7 @@ import FormattedDate from "./FormattedDate";
 import Search from "./Search";
 import Temperature from "./Temperature";
 import Forecast from "./Forecast";
+import "./Weather.css";
 
 const apiKey = "5293d8454b519c30f6f6331f38c85b4c";
 
@@ -49,19 +50,21 @@ export default function Weather() {
         <div className="headerBorder">
           <h1>Weather</h1>
 
-          <Search
-            city={city}
-            handleSubmit={handleSubmit}
-            handleCityChange={handleCityChange}
-          />
+          <h3>
+            {" "}
+            <Search
+              city={city}
+              handleSubmit={handleSubmit}
+              handleCityChange={handleCityChange}
+            />
+          </h3>
         </div>
-        <div className="container">
-          <div className="weather-border">
-            <h2 id="city">{weatherData.city}</h2>
-            <Temperature temp={weatherData.temperature} />
-            <div className="d-flex">
-              <img src={weatherData.iconUrl} id="icon" align="left" alt="" />
-            </div>
+
+        <div className="city-search">
+          <h2 id="city">{weatherData.city}</h2>
+          <Temperature temp={weatherData.temperature} />
+          <div className="d-flex">
+            <img src={weatherData.iconUrl} id="icon" align="left" alt="" />
 
             <ul>
               <li id="date">

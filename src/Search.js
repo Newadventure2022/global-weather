@@ -6,27 +6,17 @@ export default function Search(props) {
       <div className="container">
         <div className="weather-border">
           <form onSubmit={props.handleSubmit}>
-            <div className="row">
-              <div className="col-9">
-                <input
-                  type="text"
-                  id="city-search"
-                  placeholder="Search for a new city"
-                  autoComplete="off"
-                  className="form-control"
-                  onChange={props.handleCityChange}
-                  value={props.city}
-                />
-              </div>
-              <div className="col-3">
-                <input
-                  type="submit"
-                  className="btn btn-primary"
-                  id="search-button"
-                  value="search"
-                />
-              </div>
-            </div>
+            <input
+              type="text"
+              id="city-search"
+              placeholder="Search for a new city"
+              autoComplete="off"
+              className="form-control"
+              onChange={props.handleCityChange}
+              value={props.city}
+            />
+
+            <input type="submit" id="search-button" value="search" />
           </form>
         </div>
       </div>
