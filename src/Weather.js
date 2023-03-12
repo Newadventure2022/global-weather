@@ -46,9 +46,18 @@ export default function Weather() {
   if (weatherData.ready) {
     return (
       <div className="Weather">
+        <div className="headerBorder">
+          <h1>Weather</h1>
+
+          <Search
+            city={city}
+            handleSubmit={handleSubmit}
+            handleCityChange={handleCityChange}
+          />
+        </div>
         <div className="container">
           <div className="weather-border">
-            <h1 id="city">{weatherData.city}</h1>
+            <h2 id="city">{weatherData.city}</h2>
             <Temperature temp={weatherData.temperature} />
             <div className="d-flex">
               <img src={weatherData.iconUrl} id="icon" align="left" alt="" />
@@ -62,11 +71,7 @@ export default function Weather() {
                 {weatherData.description}
               </li>
             </ul>
-            <Search
-              city={city}
-              handleSubmit={handleSubmit}
-              handleCityChange={handleCityChange}
-            />
+
             <div className="percentage-table">
               <div className="row even-space">
                 <div className="col-2">Humidity</div>
