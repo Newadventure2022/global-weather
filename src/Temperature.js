@@ -1,51 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 
-import "./Temperature.css";
+export default function Temperature(props) {
+  const [unit, setUnit] = useState("metric");
 
-export default function temperature() {
-  return (
-    <div className="temp-main">
-      <h3 className="date-heading">
-        Last Updated: <span id="date">Wednesday</span>
-      </h3>
-      <p className="temperature">
-        <img
-          src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
-          alt="rainy"
-          id="icon"
-        />
-        <span className="temp-number" id="temperature">
-          10
-        </span>
-        <span className="units">
-          <a href="/#" id="celsius-link" className="active">
-            °C
-          </a>
-          |
-          <a href="/#" id="fahrenheit-link">
-            °F
-          </a>
-        </span>
-        <span className="verticalLine">
-          Weather:{" "}
-          <span className="weather" id="weather">
-            Clear
+  function convertCelsius(event) {
+    event.preventDefault();
+    setUnit("metric");
+  }
+
+  function convertFahrenheit(event) {
+    event.preventDefault();
+    setUnit("imperial");
+  }
+
+  if (unit === "imperial") {
+    return (
+      <div className="TempConversion">
+        <div className="d-flex">
+          <h2 id="temp-display">{props.temp}</h2>
+          <span>
+            °F |{" "}
+            <a href="/" onClick={convertCelsius}>
+              °C
+            </a>
           </span>
-          <br />
-          Humidity:{" "}
-          <span className="humidity" id="humidity">
-            70
+        </div>
+      </div>
+    );
+  } else {
+    let celsius = (props.temp * 9) / 5 + 32;
+    return (
+      <div className="TempConversion">
+        <div className="d-flex">
+          <h2 id="temp-display">{celsius}</h2>
+          <span>
+            <a href="/" onClick={convertFahrenheit}>
+              °F{" "}
+            </a>{" "}
+            | °C
           </span>
-          %
-          <br />
-          Wind:{" "}
-          <span className="wind" id="wind">
-            2
-          </span>
-          km/h
-        </span>
-      </p>
-      <br />
-    </div>
-  );
+        </div>
+      </div>
+    );
+  }
 }
