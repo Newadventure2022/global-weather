@@ -13,31 +13,31 @@ export default function Temperature(props) {
     setUnit("imperial");
   }
 
-  if (unit === "imperial") {
+  if (unit === "metric") {
     return (
       <div className="TempConversion">
         <div className="d-flex">
-          <h2 id="temp-display">{props.temp}</h2>
+          <h2 id="temp-display">{Math.round(props.temp)}</h2>
           <span>
-            °F |{" "}
-            <a href="/" onClick={convertCelsius}>
-              °C
+            °C |{" "}
+            <a href="/" onClick={convertFahrenheit}>
+              °F
             </a>
           </span>
         </div>
       </div>
     );
   } else {
-    let celsius = (props.temp * 9) / 5 + 32;
+    let fahrenheit = Math.round(props.temp * 9) / 5 + 32;
     return (
       <div className="TempConversion">
         <div className="d-flex">
-          <h2 id="temp-display">{celsius}</h2>
+          <h2 id="temp-display">{Math.round(fahrenheit)}</h2>
           <span>
-            <a href="/" onClick={convertFahrenheit}>
-              °F{" "}
+            <a href="/" onClick={convertCelsius}>
+              °C{" "}
             </a>{" "}
-            | °C
+            | °F
           </span>
         </div>
       </div>

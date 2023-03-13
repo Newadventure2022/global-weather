@@ -35,7 +35,7 @@ export default function Forecast(props) {
       </div>
     );
   } else {
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${props.coordinates.lat}&lon=${props.coordinates.lon}&appid=${props.apiKey}&units=imperial`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${props.coordinates.lat}&lon=${props.coordinates.lon}&appid=${props.apiKey}&units=metric`;
 
     axios.get(apiUrl).then(handleResponse);
   }

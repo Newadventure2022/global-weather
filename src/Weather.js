@@ -68,7 +68,7 @@ export default function Weather() {
         <div className="temp-wrapper">
           <div className="temp-number">
             <img src={weatherData.iconUrl} id="icon" align="left" alt="" />
-            <Temperature temp={weatherData.temperature} />
+            <Temperature temp={Math.round(weatherData.temperature)} />
           </div>
           <div className="temperature">
             <span className="Weather">Weather: {weatherData.description}</span>
