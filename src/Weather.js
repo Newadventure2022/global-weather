@@ -46,7 +46,7 @@ export default function Weather() {
 
   if (weatherData.ready) {
     return (
-      <div className="Weather">
+      <div className="weather">
         <div className="headerBorder">
           <h1>Weather</h1>
 
@@ -59,63 +59,29 @@ export default function Weather() {
             />
           </h3>
         </div>
-
-        <div className="city-search">
+        <div className="cities">
           <h2 id="city">{weatherData.city}</h2>
-          <Temperature temp={weatherData.temperature} />
-          <div className="d-flex">
+        </div>
+        <div className="date-heading">
+          <FormattedDate date={weatherData.date} />
+        </div>
+        <div className="temp-wrapper">
+          <div className="temp-number">
             <img src={weatherData.iconUrl} id="icon" align="left" alt="" />
-
-            <ul>
-              <li id="date">
-                <FormattedDate date={weatherData.date} />
-              </li>
-              <li id="description" className="text-capitalize">
-                {weatherData.description}
-              </li>
-            </ul>
-
-            <div className="percentage-table">
-              <div className="row even-space">
-                <div className="col-2">Humidity</div>
-                <div className="col-2">Feels Like</div>
-                <div className="col-2">Wind Speed</div>
-              </div>
-              <div className="row even-space">
-                <div className="col-2" id="humidity">
-                  {weatherData.humidity}%
-                </div>
-                <div className="col-2" id="feels-like">
-                  {weatherData.feelsLike}°F
-                </div>
-                <div className="col-2" id="wind">
-                  {weatherData.wind} mph
-                </div>
-              </div>
-            </div>
+            <Temperature temp={weatherData.temperature} />
           </div>
-          <Forecast coordinates={weatherData.coordinates} apiKey={apiKey} />
-          <div className="center-me">
-            <small>
-              Open Source Repository{" "}
-              <a
-                href="https://github.com/Newadventure2022"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="github-link"
-              >
-                here
-              </a>{" "}
-              made by{" "}
-              <a
-                href="https://www.linkedin.com/in/cecelia-c-975193ab/"
-                className="linkedIn-link"
-              >
-                Celia Corona-Doran
-              </a>{" "}
-            </small>
+          <div className="temperature">
+            <span className="Weather">Weather: {weatherData.description}</span>
+            <span className="Humidity">Humidity: {weatherData.humidity}%</span>
+            <span className="Feels-like">
+              Feels Like: {weatherData.feelsLike}°C
+            </span>
+            <span className="Wind">Wind: {weatherData.wind} km/h</span>
           </div>
         </div>
+        <div className="nextSix">Next 6 Day Weather Forecast</div>
+        <Forecast coordinates={weatherData.coordinates} apiKey={apiKey} />
+        <div className="center-me"></div>
       </div>
     );
   } else {

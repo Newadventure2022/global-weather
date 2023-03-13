@@ -15,7 +15,6 @@ export default function Search(props) {
               onChange={props.handleCityChange}
               value={props.city}
             />
-
             <input type="submit" id="search-button" value="search" />
           </form>
         </div>

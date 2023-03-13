@@ -10,11 +10,8 @@ function App() {
     <div>
       <div className="App">
         <div className="Container">
-          <h2 className="current-city">
+          <div>
             <Weather defaultCity="Valencia" />{" "}
-          </h2>
-          <div className="nextSix">
-            <p className="current-city">Next 6 Day Weather Forecast</p>
           </div>
 
           <Footer />

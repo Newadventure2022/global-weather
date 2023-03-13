@@ -1,5 +1,5 @@
 .Footer {
-  font-size: 13px;
+  font-size: 15px;
   text-align: center;
   clear: both;
   position: relative;
@@ -10,7 +10,7 @@
   color: blue;
 }
 
-span {
+.my-name {
   color: #000;
   opacity: 0.5;
 }
