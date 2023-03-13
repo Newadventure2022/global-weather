@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div className="Footer">
       <a
-        href="https://github.com/Newadventure2022/Celias-Projects-for-SheCodes"
+        href="https://github.com/Newadventure2022"
         target="_blank"
         rel="noreferrer"
         className="Visit"
