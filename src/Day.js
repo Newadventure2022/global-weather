@@ -16,7 +16,7 @@ export default function Day(props) {
       />
       <div className="weekly-forecast-temp">
         <span className="weekly-high">
-          {Math.round(props.forecast.temp.max)}°
+          {Math.round(props.forecast.temp.max)}°/
         </span>
         <span className="weekly-low">
           {Math.round(props.forecast.temp.min)}°
