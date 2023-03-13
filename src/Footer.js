@@ -10,7 +10,7 @@ export default function Footer() {
         rel="noreferrer"
         className="Visit"
       >
-        Open-source code <span className="my-name">by Corona-Doran</span>
+        Open-source code <span className="my-name">by Celia Corona-Doran</span>
       </a>
     </div>
   );
