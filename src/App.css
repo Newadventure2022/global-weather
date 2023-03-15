@@ -1,12 +1,11 @@
 .App body {
   margin: 10px 10px;
 }
-.Container {
+.container {
   border: solid 3px #e6e9f0;
   border-radius: 10px;
   margin: 20px auto;
   max-width: 850px;
-  padding: 15px;
   background: #20002c; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
