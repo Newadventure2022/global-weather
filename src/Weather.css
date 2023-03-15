@@ -51,7 +51,9 @@ h2 {
   color: white;
   margin-bottom: 0;
 }
-
+#city {
+  font-size: 35px;
+}
 #temp-display {
   font-size: 60px;
   margin: 0;
