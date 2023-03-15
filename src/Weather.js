@@ -47,7 +47,7 @@ export default function Weather() {
   if (weatherData.ready) {
     return (
       <div className="weather">
-        <div className="headerBorder">
+        <div className="headerBorder row">
           <h1>Weather</h1>
 
           <h3>
@@ -59,27 +59,33 @@ export default function Weather() {
             />
           </h3>
         </div>
-        <div className="cities">
-          <h2 id="city">{weatherData.city}</h2>
-        </div>
-        <div className="date-heading">
-          <FormattedDate date={weatherData.date} />
-        </div>
-        <div className="temp-wrapper">
-          <div className="temp-number">
-            <img src={weatherData.iconUrl} id="icon" align="left" alt="" />
-            <Temperature temp={Math.round(weatherData.temperature)} />
+        <div className="row">
+          <div className="cities">
+            <h2 id="city">{weatherData.city}</h2>
           </div>
-          <div className="temperature">
-            <span className="Weather">Weather: {weatherData.description}</span>
-            <span className="Humidity">Humidity: {weatherData.humidity}%</span>
-            <span className="Feels-like">
-              Feels Like: {weatherData.feelsLike}°C
-            </span>
-            <span className="Wind">Wind: {weatherData.wind} km/h</span>
+          <div className="date-heading">
+            <FormattedDate date={weatherData.date} />
+          </div>
+          <div className="temp-wrapper">
+            <div className="temp-number">
+              <img src={weatherData.iconUrl} id="icon" align="left" alt="" />
+              <Temperature temp={Math.round(weatherData.temperature)} />
+            </div>
+            <div className="temperature">
+              <span className="Weather">
+                Weather: {weatherData.description}
+              </span>
+              <span className="Humidity">
+                Humidity: {weatherData.humidity}%
+              </span>
+              <span className="Feels-like">
+                Feels Like: {weatherData.feelsLike}°C
+              </span>
+              <span className="Wind">Wind: {weatherData.wind} km/h</span>
+            </div>
           </div>
         </div>
-        <div className="nextSix">Next 6 Day Weather Forecast</div>
+        <div className="nextSix row">Next 6 Day Weather Forecast</div>
         <Forecast coordinates={weatherData.coordinates} apiKey={apiKey} />
         <div className="center-me"></div>
       </div>

@@ -1,3 +1,7 @@
+.container {
+  padding: 30px;
+}
+
 form {
   font-size: 17px;
   text-align: right;
@@ -98,7 +102,6 @@ h2 {
 
 .cities h2 {
   margin-bottom: 0;
-  padding-left: 20px;
 }
 
 .weather h3 {
@@ -127,7 +130,6 @@ h2 {
   margin-bottom: 0;
   text-transform: capitalize;
   padding-bottom: 0;
-  padding-left: 20px;
   font-weight: 400;
   margin-top: 4px;
   color: #f0ccfe;
