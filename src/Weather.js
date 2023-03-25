@@ -87,7 +87,6 @@ export default function Weather() {
         </div>
         <div className="nextSix row">Next 6 Day Weather Forecast</div>
         <Forecast coordinates={weatherData.coordinates} apiKey={apiKey} />
-        <div className="center-me"></div>
       </div>
     );
   } else {
