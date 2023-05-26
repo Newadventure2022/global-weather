@@ -36,7 +36,7 @@ export default function Forecast(props) {
     );
   } else {
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${props.coordinates.lat}&lon=${props.coordinates.lon}&appid=${props.apiKey}&units=metric`;
-
+    console.log(apiUrl);
     axios.get(apiUrl).then(handleResponse);
   }
 }
